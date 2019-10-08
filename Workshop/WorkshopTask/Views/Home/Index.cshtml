@@ -1,0 +1,27 @@
+﻿@using System.Collections.Generic;
+@using WorkshopTask.Models;
+
+@model IEnumerable<TaskModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-left">
+    @foreach (var item in Model)
+    {
+        <ul>
+            <li> 
+                @item.Name 
+            </li>
+
+            <li> 
+                @item.Description 
+            </li>
+
+            <li> 
+                @item.IsDone 
+            </li>
+        </ul>
+    }
+</div>
